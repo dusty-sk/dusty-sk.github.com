@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dusty_sk - YouTube Bloxd</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+<nav class="nav">
+    <a href="index.html">main</a>
+    <a href="videos.html">videos</a>
+    <a href="Tpacks.html">Tpacks</a>
+    <a href="maps.html">maps (unfinished)</a>
+    <a href="codes.html">codes (unfinished)</a>
+
+</nav>
+
+<header>
+    <img src="cfc2d388-cec3-436e-8209-a49a325eaca8.png" alt="Profilovka Dusty_sk" class="logo" />
+    <div class="about-container">
+        <h1>Dusty_sk</h1>
+        <section class="about">
+            <h2>About me</h2>
+            <h4>
+                I am a bloxd.io YouTuber, my goal is to someday achieve YouTuber rank or just beat @ChatDan. Please subscribe.
+                <br>
+                (send me codes/maps you want to be on my page here: dustysr204@gmail.com)
+            </h4>
+        </section>
+    </div>
+
+    <a class="yt-button" href="https://www.youtube.com/@Dusty_sk" target="_blank" rel="noopener noreferrer">
+        📺 Subscribe
+    </a>
+
+    <!-- Live stats -->
+    <div class="live-numbers">
+        See my live stats here:
+        <a href="https://socialcounts.org/youtube-live-subscriber-count/UCqNjA5reMxqFgEu0ULl3iXw" target="_blank" rel="noopener noreferrer">
+            stats
+        </a>
+    </div>
+</header>
+
+
+<section class="code-section">
+    <h2>Day/Night Cycle Scripts (not working)</h2>
+
+    <!-- 1. kód -->
+    <div class="code-block">
+        <h3>Script 1</h3>
+        <div class="screenshot-placeholder">
+            <img src="screenshots/zapad.png" alt="Screenshot Script 1">
+        </div>
+        <pre id="code-block1">let a = 0, b = 0, c = 12 * 6e5, d = 24e3, e = d / c, f = 0, g = 0;
+
+tick = ms => {
+  a = (a + 0.002 * e) % (2 * Math.PI);
+  b = (b + 0.005 * e) % Math.PI;
+  const p = api.getPlayerIds(),
+    h = ((f % c) * e) % d,
+    i = ((ms % c) * e) % d;
+  if (i < h) g++;
+  f = ms;
+  let j = i;
+  if (g % 100 === 0 && i < 50) j = (j + 20) % d;
+
+  const s0 = 23000, s1 = 4000, d0 = s1, d1 = 12000,
+    s2 = d1, s3 = 13000, n0 = s3, n1 = s0;
+  const r = j >= s0 || j < s1,
+    q = j >= d0 && j < d1,
+    t = j >= s2 && j < s3,
+    u = !r && !q && !t;
+
+  let v = [255, 225, 255], w = 1.8;
+
+  if (u) {
+    v = [128, 128, 179];
+    w = 1.0;
+  } else if (r) {
+    const x = j >= s0
+      ? (j - s0) / (d - s0 + s1)
+      : (j + (d - s0)) / (d - s0 + s1);
+    v = [Math.floor(25 + 230 * x), Math.floor(38 + 217 * x), Math.floor(128 + 127 * x)];
+    w = 3.0 - 2.2 * x;
+  } else if (t) {
+    const x = (j - s2) / (s3 - s2);
+    v = [Math.floor(255 - 230 * x), Math.floor(255 - 217 * x), Math.floor(255 - 127 * x)];
+    w = 15.8 + 2.2 * x;
+  } else if (q) {
+    v = [255, 255, 255];
+    w = 0.01;
+  }
+
+  for (const y of p) {
+    api.setClientOption(y, "skyBox", {
+      type: "earth",
+      inclination: b,
+      azimuth: a,
+      turbidity: w,
+      vertexTint: v
+    });
+  }
+};
+</pre>
+        <button class="copy-btn" onclick="copyCode('code-block1')">Copy to clipboard</button>
+        <span class="copied-msg" id="copied-msg1">Copied to clipboard!</span>
+    </div>
+
+    <!-- 2. kód -->
+    <div class="code-block">
+        <h3>Script 2</h3>
+        <div class="screenshot-placeholder">
+            <img src="images/script2.png" alt="Screenshot Script 2">
+        </div>
+        <pre id="code-block2">// paste code here...</pre>
+        <button class="copy-btn" onclick="copyCode('code-block2')">Copy to clipboard</button>
+        <span class="copied-msg" id="copied-msg2">Copied to clipboard!</span>
+    </div>
+
+    <!-- 3. kód -->
+    <div class="code-block">
+        <h3>Script 3</h3>
+        <div class="screenshot-placeholder">
+            <img src="images/script3.png" alt="Screenshot Script 3">
+        </div>
+        <pre id="code-block3">// paste code here...</pre>
+        <button class="copy-btn" onclick="copyCode('code-block3')">Copy to clipboard</button>
+        <span class="copied-msg" id="copied-msg3">Copied to clipboard!</span>
+    </div>
+
+    <!-- 4. kód -->
+    <div class="code-block">
+        <h3>Script 4</h3>
+        <div class="screenshot-placeholder">
+            <img src="" alt="Screenshot Script 4">
+        </div>
+        <pre id="code-block4">// paste code here...</pre>
+        <button class="copy-btn" onclick="copyCode('code-block4')">Copy to clipboard</button>
+        <span class="copied-msg" id="copied-msg4">Copied to clipboard!</span>
+    </div>
+
+    <!-- 5. kód -->
+    <div class="code-block">
+        <h3>Script 5</h3>
+        <div class="screenshot-placeholder">
+            <img src="screenshots/" alt="Screenshot Script 5">
+        </div>
+        <pre id="code-block5">// paste code here...</pre>
+        <button class="copy-btn" onclick="copyCode('code-block5')">Copy to clipboard</button>
+        <span class="copied-msg" id="copied-msg5">Copied to clipboard!</span>
+    </div>
+
+    <!-- 6. kód -->
+    <div class="code-block">
+        <h3>Script 6</h3>
+        <div class="screenshot-placeholder">
+            <img src="images/script6.png" alt="Screenshot Script 6">
+        </div>
+        <pre id="code-block6">// paste code here...</pre>
+        <button class="copy-btn" onclick="copyCode('code-block6')">Copy to clipboard</button>
+        <span class="copied-msg" id="copied-msg6">Copied to clipboard!</span>
+    </div>
+</section>
+</body>
+</html>
